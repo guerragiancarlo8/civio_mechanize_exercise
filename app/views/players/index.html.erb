@@ -1,0 +1,19 @@
+<table class="player-table">
+	<tbody>
+		<tr>
+			<th> Jugador </th>
+			<th> <a href="?sort=goles"> Goles </a></th>
+			<th> <a href="?sort=minutos"> Minutos Jugados </a></th>
+			<th> <a href="?sort=goalsmin"> Goles por Minuto </a></th>
+		</tr>
+
+		<% @players.each do |player| %>
+			<tr>
+				<th> <img src=<%= player['image'] %>></img></th>
+				<th> <%= player['goals'] %> </th>
+				<th> <%= player['minutes'] %> </th>
+				<th> <%= player['goalsmin'] %> </th>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
